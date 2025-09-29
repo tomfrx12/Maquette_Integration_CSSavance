@@ -1,0 +1,123 @@
+/* --- Architecture : ITCSS --- /
+/ --- Convention : Utility first --- */
+
+/* Settings */
+:root {
+    --color-primary-050: #E4F2FF;
+    --color-primary-100: #C0D5F3;
+    --color-primary-500: #3263AC;
+    --color-primary-600: #26498B;
+    --color-primary-700: #324055;
+    --color-primary-800: #0E1E37;
+    --color-primary-900: #020B18;
+
+    --color-secondary-000: #FFFDFA;
+    --color-secondary-050: #EFEBE3;
+    --color-secondary-100: #CFBB95;
+    --color-secondary-600: #7B5738;
+
+    --color-essential-050: #FAFAFA;
+    --color-essential-100: #EEEEEE;
+    --color-essential-200: #959595;
+    --color-essential-300: #6B7584;
+    --color-essential-400: #474747;
+    --color-essential-500: #000000;
+
+    --open-sans: "Open Sans";
+    --georama: "Georama";
+
+    --spacing: 16px;
+}
+
+
+/* Generic */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-family: var(--open-sans);
+    font-weight: normal;
+    font-style: normal;
+    font-size: 16px;
+    text-decoration: none;
+    color: var(--color-essential-500);
+}
+
+/* Elements */
+header {
+    border-bottom: solid 1px var(--color-primary-050);
+    padding: 0.75rem 0;
+    position: sticky;
+}
+
+.button {
+    background: var(--color-secondary-100);
+    padding: 0.5rem 1rem;
+    border-radius: 100px;
+    transition: all 0.3s ease-in;
+    color: var(--color-primary-800);
+}
+
+.button:hover {
+    background: var(--color-secondary-600);
+    color: var(--color-secondary-000);
+}
+
+.buttonNav {
+    color: var(--color-primary-800);
+    transition: all 0.3s ease-in;
+}
+
+.buttonNav:hover {
+    border-bottom: solid 2px var(--color-secondary-100);
+}
+
+/* Objects */
+.max-w-laptop {
+    max-width: 1070px;
+    margin: auto;
+}
+
+.g-20 { gap: 1.75rem }
+
+.font-semibold {
+    font-weight: 600;
+}
+
+.text-sm { font-size: 1rem }
+
+.text-upper {
+    text-transform: uppercase;
+}
+
+.flex {
+    display: flex;
+}
+
+.justify-center {  
+    justify-content: center;
+}
+
+.justify-between {
+    justify-content: space-between;
+}
+
+.justify-around {
+    justify-content: space-around;
+}
+
+.items-center {
+    align-items: center;
+}
+
+.content-center {
+    align-content: center;
+}
+
+.flex-wrap {
+    flex-wrap: wrap;
+}
+
+.bg-primary-800 {
+    background-color: var(--color-primary-800);
+}
