@@ -1,2 +1,141 @@
 /* --- Architecture : ITCSS --- /
 / --- Convention : Utility first --- */
+
+/* Elements */
+.heroSection > img:first-child {
+    position: absolute;
+    z-index: -1;
+    top: 145px;
+    left: 240px;
+}
+
+.heroContent {
+    z-index: 0; 
+}
+
+.heroSection {
+    padding: 2rem 0;
+}
+
+.heroTitleSubtitle {
+    padding: 4rem 0;
+}
+
+.heroTitleSubtitle > div:first-child > p:first-child {
+    color: var(--color-secondary-600);
+}
+
+.heroTitleSubtitle > h1:first-child {
+    color: var(--color-primary-900);
+}
+
+.heroSectionButton {
+    padding: 0.75rem 2rem !important;
+}
+
+.heroRating p {
+    padding: 3rem 0;
+}
+
+.accompaniementSection {
+    padding: 6rem 0;
+    background-color: var(--color-essential-050);
+}
+
+.accompaniementColumnRight {
+    border-radius: 12px;
+    border: solid 1px var(--color-primary-100);
+    padding: 2rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.accompaniementColumnRight > img:first-child {
+    position: absolute;
+    z-index: 0;
+    max-width: 240px;
+    top: -35px;
+    right: -15px;
+}
+
+.accompaniementColumnRight > div:nth-child(2) {
+    gap: 71px;
+    z-index: 1;
+}
+
+.accompaniementDetailTitle > img {
+    min-height: 26px;
+    min-width: 2rem;
+}
+
+.accompaniementDetail p {
+    color: var(--color-essential-300);
+}
+
+.buttonAccompaniementDetail {
+    padding: 0.75rem 4rem !important;
+}
+
+.expertiseSection {
+    padding: 6rem 0;
+}
+
+.expertiseSection span, h2 {
+    color: var(--color-essential-050);
+}
+
+.expertiseDetail {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    grid-column-gap: 2rem;
+    grid-row-gap: 2rem;
+}
+
+.expertiseDetail > div:first-child {
+    grid-area: 1 / 1 / 2 / 2;
+}
+
+.expertiseDetail > div:nth-child(2) {
+    grid-area: 1 / 2 / 2 / 3;
+}
+
+.expertiseDetail > div:nth-child(3) {
+    grid-area: 1 / 3 / 2 / 4;
+}
+
+.expertiseDetail > div:nth-child(4) {
+    grid-area: 2 / 1 / 3 / 2;
+}
+
+.expertiseDetail > div:nth-child(5) {
+    grid-area: 2 / 2 / 3 / 3;
+}
+
+.expertiseDetail > div:last-child {
+    grid-area: 2 / 3 / 3 / 4;
+}
+
+.expertiseDetail > div > img {
+    max-width: 2rem;
+} 
+
+.expertiseDetail > div > h3 {
+    color: var(--color-essential-050)
+} 
+
+.expertiseDetail > div > p {
+    color: var(--color-essential-200)
+}
+
+.presenceSection {
+    padding: 6rem 0;
+}
+
+.presenceSection > div > img {
+    max-height: 320px;
+}
+
+.buttonPresenceSection {
+    padding: 4rem;
+}

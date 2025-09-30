@@ -52,15 +52,26 @@ header {
 
 .button {
     background: var(--color-secondary-100);
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 1.125rem;
     border-radius: 100px;
     transition: all 0.3s ease-in;
-    color: var(--color-primary-800);
+    line-height: 25px;
 }
 
 .button:hover {
     background: var(--color-secondary-600);
     color: var(--color-secondary-000);
+}
+
+.buttonFooter {
+    padding: 0.75rem 2rem;
+}
+
+.buttonForm {
+    border-radius: 10px;
+    text-transform: none !important;
+    padding: 0.5rem 1.5rem;
+    letter-spacing: normal !important;
 }
 
 .buttonNav {
@@ -72,52 +83,120 @@ header {
     border-bottom: solid 2px var(--color-secondary-100);
 }
 
+footer > div:first-child {
+    padding: 6rem;
+}
+
+.footerMainSection {
+    background-color: var(--color-essential-050);
+    padding: 4rem;
+}
+
+.footerMainSection > div:first-child > div:first-child {
+    max-width: 33%;
+}
+
+.footerMainSection form {
+    padding: 2px;
+    border-radius: 12px;
+    border: solid 1px var(--color-primary-100);
+}
+
+.footerMainSection form > input {
+    padding-left: 1rem;
+}
+
+.firstTextFooter {
+    color: var(--color-secondary-600);
+}
+
+.textIntoFooter {
+    color: var(--color-essential-300);
+}
+
+footer > div:last-child > div:first-child{
+    padding: 2rem;
+}
+
+footer > div:last-child > div:first-child p{
+    color: var(--color-secondary-100);
+}
+
+footer > div:last-child > div:last-child {
+    padding: 1rem;
+}
+
+footer > div:last-child > div:last-child p, .Link{
+    color: var(--color-essential-200);
+}
+
+.linkedin {
+    border-radius: 4rem;
+    background-color: var(--color-secondary-050);
+    max-width: min-content;
+}
+
+.linkedin img {
+    padding: 1.25rem;
+}
+
 /* Objects */
 .max-w-laptop {
     max-width: 1070px;
     margin: auto;
 }
 
-.g-20 { gap: 1.75rem }
+.font-georama { font-family: var(--georama); }
+.font-opensans { font-family: var(--open-sans); }
 
-.font-semibold {
-    font-weight: 600;
-}
+.g-4 { gap: 0.25rem; }
+.g-8 { gap: 0.5rem; }
+.g-16 { gap: 1rem; }
+.g-20 { gap: 1.25rem; }
+.g-24 { gap: 1.5rem; }
+.g-32 { gap: 2rem; }
+.g-48 { gap: 3rem; }
+.g-64 { gap: 4rem; }
 
-.text-sm { font-size: 1rem }
+.font-300 { font-weight: 300; }
+.font-600 { font-weight: 600; }
+.font-700 { font-weight: 700; }
+.font-800 { font-weight: 800; }
 
-.text-upper {
-    text-transform: uppercase;
-}
+.text-14 { font-size: 0.875rem; }
+.text-16 { font-size: 1rem; }
+.text-18 { font-size: 1.125rem; }
+.text-20 { font-size: 1.25rem; }
+.text-24 { font-size: 1.5rem; }
+.text-30 { font-size: 1.875rem; }
+.text-32 { font-size: 2rem; }
+.text-48 { font-size: 3rem; }
 
-.flex {
-    display: flex;
-}
+.text-upper { text-transform: uppercase; }
 
-.justify-center {  
-    justify-content: center;
-}
+.letter-spacing-10 { letter-spacing: 0.1rem; }
+.letter-spacing-15 { letter-spacing: 0.15rem; }
 
-.justify-between {
-    justify-content: space-between;
-}
+.flex { display: flex; }
 
-.justify-around {
-    justify-content: space-around;
-}
+.justify-center { justify-content: center; }
 
-.items-center {
-    align-items: center;
-}
+.justify-end { justify-content: flex-end; }
 
-.content-center {
-    align-content: center;
-}
+.justify-between { justify-content: space-between; }
 
-.flex-wrap {
-    flex-wrap: wrap;
-}
+.justify-around { justify-content: space-around; }
 
-.bg-primary-800 {
-    background-color: var(--color-primary-800);
-}
+.items-center { align-items: center; }
+
+.items-start { align-items: start; }
+
+.content-center { align-content: center; }
+
+.flex-wrap { flex-wrap: wrap; }
+
+.flex-col { flex-direction: column; }
+
+.bg-primary-800 { background-color: var(--color-primary-800); }
+
+.text-color-primary-800 { color: var(--color-primary-800); }
