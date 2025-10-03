@@ -2,39 +2,3 @@
 / --- Convention : Utility first --- */
 
 /* Elements */
-.formSection {
-    padding-top: 6rem;
-    padding-bottom: 1.75rem;
-}
-
-.formSection > img:first-child {
-    position: absolute;
-}
-
-.formTitle > p {
-    color: var(--color-secondary-600);
-}
-
-.formTitle > h1 {
-    color: var(--color-primary-900);
-}
-
-.formFields {
-    padding-right: 53px;
-}
-
-.formContainer > img:last-child {
-    padding-bottom: 40px;
-}
-
-.ratingContainer {
-    gap: 12px;
-}
-
-.ratingContainer > img {
-    width: 32px;
-}
-
-.ratingContainer > p {
-    color: var(--color-essential-500)
-}

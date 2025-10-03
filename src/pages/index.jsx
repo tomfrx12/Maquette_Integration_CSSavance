@@ -4,9 +4,9 @@ import '../styles/index.css';
 const Index = () => {
     return (
         <>
-            <div className="heroSection">
-                <img src="/svg/pattern-primary-050.svg" alt="Pattern Home Page"/>
+            <section className="heroSection">
                 <div className='max-w-laptop'>
+                    <img src="/svg/pattern-primary-050.svg" alt="Pattern Home Page" className='pattern'/>
                     <div className='heroContent flex g-64'>
                         <div className='heroTitleSubtitle flex flex-col g-48'>
                             <div>
@@ -38,8 +38,8 @@ const Index = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className='accompaniementSection'>
+            </section>
+            <section className='accompaniementSection'>
                 <div className='max-w-laptop flex g-64'>
                     <div className='accompaniementColumnLeft flex flex-col g-32'>
                         <div className='flex flex-col g-16'>
@@ -79,8 +79,8 @@ const Index = () => {
                         </div>
                     </div>
                 </div>
-            </div>
-            <div className='expertiseSection bg-primary-800'>
+            </section>
+            <section className='expertiseSection bg-primary-800'>
                 <div className="max-w-laptop flex g-64">
                     <div className='flex flex-col g-64'>
                         <h2 className='font-300 text-32'><span className='font-700 text-32'>30 ans d'expertise,</span> au service de la mobilité internationale en Suisse</h2>
@@ -121,8 +121,8 @@ const Index = () => {
                         <img src="/img/staff.png" alt="Staff Lodge Relocation" />
                     </div>
                 </div>
-            </div>
-            <div className='presenceSection'>
+            </section>
+            <section className='presenceSection'>
                 <div className="max-w-laptop flex g-64">
                     <div className='flex flex-col g-32'>
                         <h2 className='font-300 text-32 text-color-primary-800'>Présents là <span className='font-800 text-32'>où vous en avez besoin</span></h2>
@@ -136,7 +136,7 @@ const Index = () => {
                     </div>
                     <img src="/img/presence.png" alt="Presence Lodge Relocation" className='flex items-start'/>
                 </div>
-            </div>
+            </section>
         </>
     )
 };
