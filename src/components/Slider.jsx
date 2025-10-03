@@ -240,66 +240,74 @@ export default function Slider() {
     };
 
     const sections = Object.keys(data);
-    const [activeSection, setActiveSection] = useState(sections[0] || '');
+    const [activeSection, setActiveSection] = useState(sections[0]);
     const [page, setPage] = useState(0);
 
-    const cardsPerPage = 3;
+    const { card: cards } = data[activeSection];
 
-    const cards = data[activeSection]?.card || [];
-
-    let totalPages = 1;
-    if (cards.length > 0) {
-        totalPages = parseInt(cards.length / cardsPerPage, 10);
-        if (cards.length % cardsPerPage !== 0) {
-            totalPages = totalPages + 1;
-        }
-    }
-
-    const startIndex = page * cardsPerPage;
-    const visibleCards = cards.slice(startIndex, startIndex + cardsPerPage);
+    const visibleCards = 2;
+    const totalPages = cards.length - visibleCards;
 
     const nextPage = () => {
-        if (page < totalPages - 1) setPage(page + 1);
+        setPage((l) => (l < totalPages ? l + 1 : l));
     };
 
     const prevPage = () => {
-        if (page > 0) setPage(page - 1);
+        setPage((l) => (l > 0 ? l - 1 : l));
     };
-
-    if (!sections.length) return null;
-
 
     return (
         <div className="max-w-laptop flex flex-col g-64">
-            <div className="headerSlider flex justify-between g-8 radius-round sticky">
-                {sections.map(s => (
-                    <button className="buttonSlider text-center bg-primary-800 bg-essential-050-hover font-georama font-500 text-18 color-primary-800-hover color-essential-100 transition-03-ease-in cursor-pointer radius-round w-170 justify-center" key={s} onClick={() => { setActiveSection(s); setPage(0); }}>
-                        {s}
+            <nav className="flex justify-between g-8 bg-primary-800 p-4 minh-48 radius-round sticky z-1 t-110">
+                {sections.map(section => (
+                    <button className={`minh-max text-center font-georama font-500 text-18 transition-03-ease-in cursor-pointer radius-round w-170 justify-center ${activeSection === section ? "" : "bg-primary-800 color-essential-100 bg-essential-050-hover color-primary-800-hover"}`} key={section} onClick={() => { setActiveSection(section); setPage(0); }}>
+                        {section}
                     </button>
                 ))}
+            </nav>
+            <div className="">
+                <h2 className="font-800 text-32 color-primary-900 text-center self-center maxw-460">{data[activeSection]?.h2}</h2>
+                <div className={`flex-row self-end justify-end g-32 ${cards.length <= 1 ? "none" : "flex"}`}>
+                    <button onClick={prevPage} className={`flex items-center transition-03-ease-in radius-round cursor-pointer p-16 ${page === 0 ? "bg-essential-100" : "bg-primary-800"}`}>
+                        <img src={page === 0 ? "/svg/chevron-left.svg" : "/svg/chevron-left-essential-200.svg"} alt="SVG Chevron left" />
+                    </button>
+                    <button onClick={nextPage} className={`flex items-center transition-03-ease-in radius-round cursor-pointer p-16 ${page === totalPages ? "bg-essential-100" : "bg-primary-800"}`}>
+                        <img src={page === totalPages ? "/svg/chevron-right-essential-200.svg" : "/svg/chevron-right.svg"} alt="SVG Chevron left" />
+                    </button>
+                </div>
             </div>
-            <h2 className="font-800 text-32 color-primary-900 text-center">{data[activeSection]?.h2}</h2>
-            <div>
-                <button onClick={prevPage} disabled={page === 0}>&lt;</button>
-                <button onClick={nextPage} disabled={page >= totalPages - 1}>&gt;</button>
-            </div>
-            <div className="flex">
-                {visibleCards.map((c, i) => (
-                    <div className="flex flex-col g-24 bg-essential-050 border-color-primary-100" key={i}>
-                        <img className="maxw-32" src={c.icon} alt="SVG" />
-                        <div className="flex flex-col g-8">
-                            <h3 className="font-700 text-24 color-primary-900">{c.titre}</h3>
-                            <p className="color-essential-400">{c.texte}</p>
+            <div className="overflow-hidden flex flex-col g-32">
+                <div className={`flex flex-row g-24 transition-03-ease-in pl-48 ${cards.length <= 1 ? "justify-center" : "justify-start"}`} style={{transform: `translateX(-${page * (100 / visibleCards)}%)`}}>
+                    {cards.map((card, i) => (
+                        <div className="flex flex-col g-24 bg-essential-050 border-color-primary-100 radius-12 p-32 w-475 shrink-0" key={i} style={{ width: "calc(100% / 3)" }}>
+                            <img className="maxw-32" src={card.icon} alt="SVG" />
+                            <div className="flex flex-col g-8">
+                                <h3 className="font-700 text-24 color-primary-900">{card.titre}</h3>
+                                <p className="color-essential-400 line-h-24 font-400">{card.texte}</p>
+                            </div>
+                            <ul className="flex flex-col g-12 pl-48">
+                                {card.liste.map((item, j) => (
+                                    <li className="line-h-24 color-essential-500" key={j}>{item}</li>
+                                ))}
+                            </ul>
                         </div>
-                        <ul className="flex flex-col g-12 ">
-                            {c.liste.map((item, j) => (
-                                <li className="line-h-24 color-essential-400" key={j}>{item}</li>
-                            ))}
-                        </ul>
-                    </div>
-                ))}
+                    ))}
+                </div>
+                <div className="flex flex-row g-8 justify-center items-center">
+                    {Array.from({ length: cards.length - 1 }).map((_, i) => (
+                        <button key={i} onClick={() => setPage(i)} className="bg-inherit" aria-current={i === page ? "true" : "false"}>
+                            {i === page ? 
+                                (
+                                    <img src="svg/bar.svg" className=""/>
+                                ) : (
+                                    <img src="svg/dot.svg" className="cursor-pointer"/>
+                                )
+                                }
+                        </button>
+                    ))}
+                </div>
             </div>
-            <Button link="contact" text="prendre contact avec nos équipes" className="text-center"/>
+            <Button onClick={() => { window.scrollTo(0, 0)}} link="contact" text="prendre contact avec nos équipes" className="text-center"/>
         </div>
     );
-}
+};

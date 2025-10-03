@@ -1,74 +1,73 @@
 import Button from "../components/Button";
 import FAQItem from "../components/FAQItem";
 import Slider from "../components/Slider";
-import "../styles/relocation.css"
 
 const Relocation = () => {
     return (
         <>
-        <section className="relocationSection">
+        <section className="relative z-0 pt-96 bg-secondary-000">
             <div className="max-w-laptop">
-                <img src="/svg/pattern-primary-050.svg" alt="Pattern Home Page" className='pattern'/>
+                <img src="/svg/pattern-primary-050.svg" alt="Pattern Home Page" className='absolute z--1 t--40 l-150'/>
                 <div className="mainContent flex g-64">
                     <div className="flex flex-col g-32 items-start">
-                        <div className="mainContentTitle flex flex-col g-8">
-                            <p className="text-upper font-600 font-georama text-18 letter-spacing-10">Parce que chaque situation est unique.</p>
-                            <h1 className="font-300 text-48">Nous vous proposons une gamme de <span className="font-800 text-48">services de relocation sur mesure.</span></h1>
+                        <div className="flex flex-col g-8">
+                            <p className="text-upper font-600 font-georama text-18 letter-spacing-10 color-secondary-600">Parce que chaque situation est unique.</p>
+                            <h1 className="font-300 text-48">Nous vous proposons une gamme de <span className="font-800 text-48 color-primary-900">services de relocation sur mesure.</span></h1>
                         </div>
-                        <div className="mainContentSubtitle flex flex-col g-32">
-                            <p>Depuis 1994, nous vous accompagnons partout en Suisse grâce à une présence nationale, alliant expertise locale et étroite collaboration avec les partenaires locaux.</p>
-                            <p>Nous construisons avec vous un programme personnalisé, conçu pour répondre précisément à vos besoins spécifiques et garantir une installation en toute sérénité.</p>
+                        <div className="flex flex-col g-32">
+                            <p className="color-essential-300">Depuis 1994, nous vous accompagnons partout en Suisse grâce à une présence nationale, alliant expertise locale et étroite collaboration avec les partenaires locaux.</p>
+                            <p className="color-essential-300">Nous construisons avec vous un programme personnalisé, conçu pour répondre précisément à vos besoins spécifiques et garantir une installation en toute sérénité.</p>
                         </div>
-                    <Button link="contact" text="Démarrez votre projet" className="buttonRelocationSection text-16"/>
+                    <Button onClick={() => { window.scrollTo(0, 0)}} link="contact" text="Démarrez votre projet" className="text-16 py-12 px-32"/>
                     </div>
-                    <div className="mainContentColumnRight flex flex-col g-24">
-                        <p>Nous prenons en charge la coordination complète du projet afin de :</p>
-                        <div className="flex justify-center g-16">
-                            <img src="/svg/check-circle.svg" alt="SVG Check Circle" />
-                            <p className="text-18">vous <span className="font-700 text-18">libérer de toute contrainte</span> logistique,</p>
+                    <div className="flex flex-col g-24 minw-312">
+                        <p className="color-essential-300">Nous prenons en charge la coordination complète du projet afin de :</p>
+                        <div className="flex justify-center g-16 p-16">
+                            <img src="/svg/check-circle.svg" alt="SVG Check Circle" className="minw-32"/>
+                            <p className="text-18 color-primary-800">vous <span className="font-700 text-18 color-primary-800">libérer de toute contrainte</span> logistique,</p>
                         </div>
-                        <div className="flex justify-center g-16">
-                            <img src="/svg/check-circle.svg" alt="SVG Check Circle" />
-                            <p className="text-18">vous <span className="font-700 text-18">assurer une installation rapide,</span></p>
+                        <div className="flex justify-center g-16 p-16">
+                            <img src="/svg/check-circle.svg" alt="SVG Check Circle" className="minw-32"/>
+                            <p className="text-18 color-primary-800">vous <span className="font-700 text-18 color-primary-800">assurer une installation rapide,</span></p>
                         </div>
-                        <div className="flex justify-center g-16">
-                            <img src="/svg/check-circle.svg" alt="SVG Check Circle" />
-                            <p className="text-18">et une <span className="font-700 text-18">intégration sereine.</span></p>
+                        <div className="flex justify-center g-16 p-16">
+                            <img src="/svg/check-circle.svg" alt="SVG Check Circle" className="minw-32"/>
+                            <p className="text-18 color-primary-800">et une <span className="font-700 text-18 color-primary-800">intégration sereine.</span></p>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section className="additionalSection">
+        <section className="py-96">
             <Slider />
         </section>
-        <section className="testimonialSection">
-            <div className="max-w-laptop flex flex-col g-64">
-                <h2 className="text-upper font-georama font-600 text-18 letter-spacing-10">Avis client</h2>
+        <section className="bg-primary-800">
+            <div className="max-w-laptop flex flex-col g-64 p-96">
+                <h2 className="text-upper font-georama font-600 text-18 letter-spacing-10 color-secondary-100">Avis client</h2>
                 <div className="flex g-64">
-                    <div className="testimonialSectionFirstColumn flex flex-col g-16">
+                    <div className="flex flex-col g-16 maxw-64 minw-503">
                         <img src="/svg/quote.svg" alt="SVG Quote" />
                         <div className="flex flex-col g-16">
-                            <p className="font-700 text-20">Chaque étape, de la recherche du logement au soutien pour la gestion des formalités administratives, a été prise en charge avec une efficacité remarquable.</p>
-                            <p className="font-400">Nous avons fait appel à Lodge Relocation pour notre déménagement et nous sommes très satisfaits de leurs services !</p>
+                            <p className="font-700 text-20 color-primary-050">Chaque étape, de la recherche du logement au soutien pour la gestion des formalités administratives, a été prise en charge avec une efficacité remarquable.</p>
+                            <p className="font-400 color-primary-050">Nous avons fait appel à Lodge Relocation pour notre déménagement et nous sommes très satisfaits de leurs services !</p>
                         </div>
                     </div>
-                    <div className="testimonialSectionLastColumn flex flex-col g-16">
+                    <div className="flex flex-col g-16 minw-503">
                         <div className="flex flex-col g-32">
-                            <p className="font-400">Dès le début, Virginie a su se montrer disponible, professionnelle et à l’écoute de nos besoins spécifiques et nous tenons également à la remercier chaleureusement pour sa gentillesse.</p>
-                            <p className="font-400">Grâce à leur expertise, notre transition s’est déroulée avec le minimum possible de stress et nous avons pu nous installer sereinement dans notre nouveau domicile.</p>
-                            <p className="font-400">Un grand merci pour leur accompagnement personnalisé et leur dévouement et nous recommandons bien entendu leurs services !</p>
+                            <p className="font-400 color-primary-050">Dès le début, Virginie a su se montrer disponible, professionnelle et à l’écoute de nos besoins spécifiques et nous tenons également à la remercier chaleureusement pour sa gentillesse.</p>
+                            <p className="font-400 color-primary-050">Grâce à leur expertise, notre transition s’est déroulée avec le minimum possible de stress et nous avons pu nous installer sereinement dans notre nouveau domicile.</p>
+                            <p className="font-400 color-primary-050">Un grand merci pour leur accompagnement personnalisé et leur dévouement et nous recommandons bien entendu leurs services !</p>
                         </div>
-                        <p className="font-300 italic text-end">David</p>
+                        <p className="font-300 italic text-end color-primary-050">David</p>
                     </div>
                 </div>
             </div>
         </section>
-        <section className="FAQSection">
+        <section className="FAQSection relative z-0 py-96 bg-secondary-000">
             <div className="max-w-laptop flex flex-col g-32">
-                <img src="/svg/pattern-primary-600.svg" alt="Pattern Home Page" className='pattern' />
-                <h2 className="font-300 text-32">Vos questions sur <span className="font-800 text-32">la relocation</span></h2>
-                <div className="FAQItems flex flex-col g-24">
+                <img src="/svg/pattern-primary-600.svg" alt="Pattern Home Page" className='absolute z--1 t-420 r--150 opacity-30' />
+                <h2 className="font-300 text-32 color-primary-800">Vos questions sur <span className="font-800 text-32">la relocation</span></h2>
+                <div className="flex flex-col g-24 maxw-725">
                     <FAQItem title="Quel est le délai moyen pour trouver un logement avec votre accompagnement ?" content = {
                         <>
                         <p>Le temps nécessaire dépend de chaque situation (composition de la famille, taille du logement souhaité, budget…) et de la période de l’année. En moyenne, il faut compter 1 mois et demi, avec une fourchette de 2 semaines à 4 mois.</p>
