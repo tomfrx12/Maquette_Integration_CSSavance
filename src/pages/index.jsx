@@ -3,9 +3,9 @@ import Button from '../components/Button';
 const Index = () => {
     return (
         <>
-            <section className="py-32 relative z-0">
-                <div className='max-w-laptop'>
-                    <img src="/svg/pattern-primary-050.svg" alt="Pattern Home Page" className='absolute z--1 t--40 l-150'/>
+            <section className="py-32 ">
+                <div className='max-w-laptop relative z-0'>
+                    <img src="/svg/pattern-primary-050.svg" alt="Pattern Home Page" className='absolute z--1 t-10 l--150'/>
                     <div className='flex g-64 z-0'>
                         <div className='flex flex-col g-48 py-64'>
                             <div>
@@ -83,7 +83,7 @@ const Index = () => {
                 <div className="max-w-laptop flex g-64">
                     <div className='flex flex-col g-64'>
                         <h2 className='font-300 text-32 color-essential-050'><span className='font-700 text-32 color-essential-050'>30 ans d'expertise,</span> au service de la mobilité internationale en Suisse</h2>
-                        <div className='grid grid-template-columns-3-1fr grid-template-rows-2-1fr grid-column-g grid-row-g'>
+                        <div className='grid grid-template-columns-3-1fr grid-template-rows-2-1fr grid-column-g-2 grid-row-g-2'>
                             <div className='flex flex-col g-24 grid-area-1122'>
                                 <img src="/svg/calendar.svg" alt="SVG Calendar" className='maxw-32'/>
                                 <h3 className='font-700 text-24 color-essential-050'>Fondée en 1994</h3>
@@ -133,7 +133,7 @@ const Index = () => {
                         link="contact"
                         text={ <>prendre contact<br />avec nos équipes</> } className="flex justify-center text-16 p-64"/>
                     </div>
-                    <img src="/img/presence.png" alt="Presence Lodge Relocation" className='flex items-start maxw-320'/>
+                    <img src="/img/presence.png" alt="Presence Lodge Relocation" className='flex items-start maxh-320'/>
                 </div>
             </section>
         </>

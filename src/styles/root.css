@@ -315,6 +315,8 @@ li::marker {
 .minh-74 { min-height: 74px; }
 .minh-684 { min-height: 684px; }
 
+.maxh-320 { max-height: 320px; }
+
 .minw-min { min-width: min-content; }
 .minw-max { min-width: max-content; }
 .minw-32 { min-width: 2rem; }
@@ -329,7 +331,6 @@ li::marker {
 .maxw-32 { max-width: 2rem; }
 .maxw-64 { max-width: 4rem; }
 .maxw-240 { max-width: 240px; }
-.maxw-320 { max-width: 320px; }
 .maxw-460 { max-width: 460px; }
 .maxw-725 { max-width: 725px; }
 
@@ -338,10 +339,13 @@ li::marker {
 .w-475 { width: 457px;}
 
 
-.l-150 { left: -150px; }
+.l--150 { left: -150px; }
+.l-0 { left: 0px; }
 
 .t--35 { top: -35px; }
 .t--40 { top: -40px; }
+.t-10 { top: 10px; }
+.t-50 { top: 50px; }
 .t-0 { top: 0;}
 .t-110 { top: 110px; }
 .t-420 { top: 420px; }

@@ -5,9 +5,9 @@ import Slider from "../components/Slider";
 const Relocation = () => {
     return (
         <>
-        <section className="relative z-0 pt-96 bg-secondary-000">
-            <div className="max-w-laptop">
-                <img src="/svg/pattern-primary-050.svg" alt="Pattern Home Page" className='absolute z--1 t--40 l-150'/>
+        <section className="pt-96 bg-secondary-000">
+            <div className="max-w-laptop relative z-0">
+                <img src="/svg/pattern-primary-050.svg" alt="Pattern Home Page" className='absolute z--1 t--40 l--150'/>
                 <div className="mainContent flex g-64">
                     <div className="flex flex-col g-32 items-start">
                         <div className="flex flex-col g-8">
@@ -46,7 +46,7 @@ const Relocation = () => {
                 <h2 className="text-upper font-georama font-600 text-18 letter-spacing-10 color-secondary-100">Avis client</h2>
                 <div className="flex g-64">
                     <div className="flex flex-col g-16 maxw-64 minw-503">
-                        <img src="/svg/quote.svg" alt="SVG Quote" />
+                        <img src="/svg/quote.svg" alt="SVG Quote" className="maxw-32"/>
                         <div className="flex flex-col g-16">
                             <p className="font-700 text-20 color-primary-050">Chaque étape, de la recherche du logement au soutien pour la gestion des formalités administratives, a été prise en charge avec une efficacité remarquable.</p>
                             <p className="font-400 color-primary-050">Nous avons fait appel à Lodge Relocation pour notre déménagement et nous sommes très satisfaits de leurs services !</p>
@@ -63,8 +63,8 @@ const Relocation = () => {
                 </div>
             </div>
         </section>
-        <section className="FAQSection relative z-0 py-96 bg-secondary-000">
-            <div className="max-w-laptop flex flex-col g-32">
+        <section className="FAQSection py-96 bg-secondary-000">
+            <div className="max-w-laptop flex flex-col g-32  relative z-0">
                 <img src="/svg/pattern-primary-600.svg" alt="Pattern Home Page" className='absolute z--1 t-420 r--150 opacity-30' />
                 <h2 className="font-300 text-32 color-primary-800">Vos questions sur <span className="font-800 text-32">la relocation</span></h2>
                 <div className="flex flex-col g-24 maxw-725">

@@ -7,7 +7,7 @@ function Contact() {
     let content;
     if (FormArea) {
         content = (
-            <form className='flex flex-col g-16'>
+            <form className='formFields flex flex-col g-16'>
                 <div className='grid grid-template-columns-2-1fr grid-template-rows-4-1fr grid-column-g-1 grid-row-g-1'>
                     <div className='flex flex-col g-8 grid-area-1122'>
                         <label className='text-12' htmlFor="who">Vous êtes*</label>
@@ -77,9 +77,9 @@ function Contact() {
     }
 
     return (
-        <section className="pt-96 pb-28 bg-secondary-000 relative z-0">
-            <div className="max-w-laptop flex justify-between minh-684">
-                <img src="/svg/pattern-primary-050.svg" alt="Pattern Home Page" className='absolute z--1 t--40 l-150'/>
+        <section className="pt-96 pb-28 bg-secondary-000">
+            <div className="max-w-laptop flex justify-between minh-684 relative z-0">
+                <img src="/svg/pattern-primary-050.svg" alt="Pattern Home Page" className='absolute z--1 t--40 l--150'/>
                 <div className='minw-589 flex flex-col g-32'>
                     <div>
                         <p className='font-georama font-600 text-18 letter-spacing-10 text-upper color-secondary-600'>démarrez votre projet</p>
